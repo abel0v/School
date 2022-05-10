@@ -1,0 +1,65 @@
+{% extends "basw.html"%}
+
+{% block title%}
+Лицей №40 при УлГУ - официальный сайт
+{% endblock%}
+
+{% block body%}
+
+<div class="container">
+    <center>
+        <h4 style="color:white" class="ju-logo-text">МУНИЦИПАЛЬНОЕ БЮДЖЕТНОЕ ОБЩЕОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ГОРОДА
+            УЛЬЯНОВСКА "ЛИЦЕЙ № 40
+            ПРИ УЛЬЯНОВСКОМ ГОСУДАРСТВЕННОМ УНИВЕРСИТЕТЕ"</h4>
+    </center>
+</div>
+<center>
+    <div class="ju-content-layout">
+        <div class="ju-content-layout-row">
+            <div class="ju-layout-cell ju-layout-sidebar-bg" style="width: 33%">
+                <div class="ju-box ju-block">
+                    <div class="ju-box-body ju-block-body">
+
+                        <section class="py-1 text-center container">
+                            <div class="row py-lg-2">
+                                <div class="col-lg-8 col-md-4 mx-auto">
+                                    <h1 class="fw-light" style="position: relative; top: -75px">Новости нашего
+                                        Лицея</h1>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="posts" style="position: relative; left: -70px; top: -75px">
+                            {% for titl, item, t, n in data%}
+                            <div class="col" align="center">
+                                <img src={{item}} width="70%" height="50%">
+                                <div class="card-body">
+                                    <p id="cards" class="card-text"><font size="4">{{titl}}</font></p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small id="small" class="text-muted">
+                                            {{t}}x
+                                            <a href="http://127.0.0.1:8080/post/{{n}}">читать далее...</a>
+                                        </small>
+                                        <div id="small">
+                                            <style>
+                                        small{
+                                            font-size: 14px;
+                                            line-height: 1.92857143;
+                                            color: #333;
+                                            }
+                                            </style>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div id="posts">
+                            <style>
+            .posts{
+                width: 750px;
+            }
+
+                            </style>
+</center>
+
+{% endblock%}

@@ -1,0 +1,70 @@
+{% extends "basw.html"%}
+
+{% block title%}
+Ученики
+{% endblock%}
+
+{% block body%}
+<center>
+    <table id="tbl" border="1" cellpadding="5" style="font-size: 20px;">
+        <tr>
+            <th>№</th>
+            <th>Класс</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Профиль</th>
+        </tr>
+        {% for id, cls, name, surname, prof in items%}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{cls}}</td>
+            <td>{{name}}</td>
+            <td>{{surname}}</td>
+            <td>{{prof}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    <style id="tbl">
+    table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+    }
+    th {
+    font-size: 18px;
+    padding: 10px;
+    }
+    td {
+    background: #F5D7BF;
+    padding: 10px;
+    }
+    </style>
+    {% endblock%}
+
+</center>
+<footer>
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div style="color: white">
+
+                ©Муниципальное бюджетное общеобразовательное учреждение города Ульяновска
+                "Лицей № 40 при ульяновском государственном университете"
+            </div>
+
+            <p class="float-end">
+                <a href="#"
+                   style="color: white; text-decoration: none; position: relative;left: -140px; top: 7px"
+                >Back to top</a></p>
+
+
+        </div>
+    </nav>
+</footer>
